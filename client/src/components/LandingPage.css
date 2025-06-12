@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    letter-spacing: -0.25px;
+    /* slightly tighter default */
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    /* tighter logo */
+}
+
+.logo .green {
+    color: #45e04f;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: grey;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4.0rem;
+    margin: 0;
+    letter-spacing: -2.4px;
+    /* most noticeable spacing tweak */
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.green {
+    color: #45e04f;
+}
+
+.subtitle {
+    font-size: 3.5rem;
+    margin-top: -10px;
+    color: grey;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.order-button {
+    margin-top: 0px;
+    padding: 18px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #45e04f;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: -0.25px;
+}
+
+.order-button:hover {
+    background-color: #3ac344;
+    scale: 1.05;
+    transition: background-color 0.3s ease, scale 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+        letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        letter-spacing: -0.3px;
+    }
+
+    .order-button {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        letter-spacing: -0.2px;
+    }
+}
