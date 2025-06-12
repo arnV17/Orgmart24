@@ -1,19 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require('dotenv').config();
+
 const verifyToken = require("./middleware/verifyToken");
 
-const adminRoutes = require("./routes/admin");
-const userRoutes = require("./routes/user");
+const adminRoutes = require("./routes/Admin");
+const userRoutes = require("./routes/User");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://arnavog:<ajkyqeeYYoA8DDKO>@cluster0.wuwffjj.mongodb.net/", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log("MongoDB connected"));
+
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
 
 app.post("/initialize-user", verifyToken, (req, res) => {
   res.json({ role: req.user.role });

@@ -1,7 +1,7 @@
 import React from "react";
 import "./LandingPage.css";
 
-import { auth, provider } from "./firebase";
+import { auth, provider } from "../firebase.js";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
