@@ -1,12 +1,22 @@
 import React from "react";
 import LandingPage from "./components/LandingPage.jsx";
 
-export default function App() {
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
+
+function App() {
   return (
-    <div>
-      
-      
-      <LandingPage /> 
-    </div>
+    
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        
+      </Routes>
+    </Router>
   );
 }
+
+export default App;
